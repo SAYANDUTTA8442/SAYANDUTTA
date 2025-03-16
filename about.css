@@ -1,0 +1,56 @@
+/* About section styles with a futuristic vibe */
+#about {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f1f1f1;
+    padding: 60px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .about-me-content {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
+  
+  .about-me-content h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .about-me-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .about-me-content p.skills {
+    font-weight: bold;
+    font-style: italic;
+    color: #76e2ff;
+  }
+  
+  .about-me-content p.cta {
+    margin-top: 40px;
+  }
+  
+  .about-me-content p.cta a {
+    color: #0f2027;
+    text-decoration: none;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #76e2ff, #37d5d6);
+    border-radius: 50px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .about-me-content p.cta a:hover {
+    background: linear-gradient(135deg, #37d5d6, #76e2ff);
+    transform: scale(1.1);
+  }
+  

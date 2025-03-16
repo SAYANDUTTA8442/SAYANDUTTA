@@ -1,0 +1,155 @@
+/* Portfolio Section */
+#portfolio {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f1f1f1;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Background Effect */
+#portfolio::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/dirty-grain.png'), linear-gradient(135deg, #00eaff, #ff78b3);
+  opacity: 0.1;
+  animation: animatedBackground 10s linear infinite alternate;
+  z-index: -1;
+}
+
+/* Section Title */
+#portfolio h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #00eaff;
+  margin-bottom: 40px;
+  text-shadow: 0 0 15px rgba(0, 234, 255, 0.6);
+  animation: neonPulse 1.8s infinite ease-in-out;
+}
+
+/* Portfolio Container */
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Portfolio Items */
+.portfolio-item {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  text-align: left;
+  width: calc(33.33% - 40px);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hover Effects */
+.portfolio-item:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 45px rgba(0, 234, 255, 0.7);
+}
+
+/* Portfolio Item Title */
+.portfolio-item h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff78b3;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.portfolio-item:hover h3 {
+  color: #00eaff;
+}
+
+/* Portfolio Item Description */
+.portfolio-item p {
+  color: #d1d1d1;
+  line-height: 1.7;
+}
+
+/* Portfolio Item Links */
+.portfolio-item a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.portfolio-item a:hover {
+  color: #00eaff;
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+/* Portfolio Item Image */
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-item {
+      width: calc(50% - 30px);
+  }
+
+  #portfolio h1 {
+      font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-item {
+      width: 100%;
+  }
+
+  #portfolio h1 {
+      font-size: 2rem;
+  }
+}
+
+/* Keyframes for Background Animation */
+@keyframes animatedBackground {
+  0% {
+      background-position: 0 0;
+  }
+  100% {
+      background-position: 50% 50%;
+  }
+}
+
+/* Keyframes for Neon Pulse */
+@keyframes neonPulse {
+  0%, 100% {
+      text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 40px #ff78b3, 0 0 80px #ff78b3;
+  }
+  50% {
+      text-shadow: 0 0 20px #ff78b3, 0 0 40px #00eaff, 0 0 60px #ff78b3, 0 0 100px #ff78b3;
+  }
+}

@@ -1,0 +1,28 @@
+/* Button Styling */
+button {
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #ff78b3, #00eaff);
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #00eaff, #ff78b3);
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Thank You Message */
+#thank-you {
+    margin-top: 20px;
+    color: #00eaff;
+    font-size: 1.8rem;
+    animation: fadeIn 1.5s ease-in-out;
+}

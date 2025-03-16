@@ -1,0 +1,116 @@
+/* Services Section */
+#service {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f1f1f1;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Animated Background Effect */
+  #service::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/dirty-grain.png'), linear-gradient(135deg, #00eaff, #ff78b3);
+    opacity: 0.07;
+    animation: animatedBackground 12s linear infinite;
+    z-index: -1;
+  }
+  
+  /* Section Title */
+  #service h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #00eaff;
+    margin-bottom: 40px;
+    animation: neonPulse 2s infinite ease-in-out;
+  }
+  
+  /* Services Container */
+  .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Individual Service Item */
+  .service {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.33% - 20px);
+  }
+  
+  .service:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 234, 255, 0.6);
+  }
+  
+  /* Service Titles */
+  .service h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff78b3;
+    margin-bottom: 15px;
+  }
+  
+  /* Service Description */
+  .service p {
+    color: #d1d1d1;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service {
+      width: calc(50% - 20px);
+    }
+  
+    #service h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service {
+      width: 100%;
+    }
+  
+    #service h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Keyframes for Background Animation */
+  @keyframes animatedBackground {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  /* Keyframes for Neon Pulse */
+  @keyframes neonPulse {
+    0%, 100% {
+      text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 40px #ff78b3, 0 0 80px #ff78b3;
+    }
+    50% {
+      text-shadow: 0 0 20px #ff78b3, 0 0 40px #00eaff, 0 0 60px #ff78b3, 0 0 100px #ff78b3;
+    }
+  }
+  

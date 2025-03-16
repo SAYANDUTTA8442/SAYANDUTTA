@@ -1,0 +1,153 @@
+/* Skill Section */
+#skill {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f1f1f1;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Background Effect */
+#skill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/dirty-grain.png'), linear-gradient(135deg, #00eaff, #ff78b3);
+  opacity: 0.1;
+  animation: animatedBackground 15s linear infinite;
+  z-index: -1;
+}
+
+/* Animated Background Animation */
+@keyframes animatedBackground {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Section Title */
+#skill h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #00eaff;
+  margin-bottom: 50px;
+  animation: neonPulse 2s infinite ease-in-out;
+}
+
+/* Neon Pulse Effect */
+@keyframes neonPulse {
+  0%, 100% { text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 30px #ff78b3; }
+  50% { text-shadow: 0 0 20px #ff78b3, 0 0 30px #00eaff, 0 0 40px #ff78b3; }
+}
+
+/* Skill Container */
+.skill-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px; /* Increased gap for more space */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Individual Skill Item */
+.skill {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  margin: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Hover Effects */
+.skill:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 234, 255, 0.8);
+  background: rgba(0, 234, 255, 0.2);
+}
+
+.skill::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 14px;
+  background: linear-gradient(45deg, rgba(0, 234, 255, 0.8), rgba(255, 120, 179, 0.8));
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.skill:hover::before {
+  opacity: 1;
+}
+
+/* Skill Title */
+.skill h3 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #e9cfda;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Progress Bar */
+.bar {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+
+.progress {
+  background: linear-gradient(90deg, #00eaff, #ff78b3);
+  height: 100%;
+  border-radius: 10px;
+  width: 0;
+  animation: fillProgress 2s ease-in-out forwards;
+}
+
+/* Adjusting Progress Bar Fill Dynamically */
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 87%; /* Dynamically adjusts based on inline styles */
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .skill-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  #skill h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-container {
+    grid-template-columns: 1fr;
+  }
+
+  #skill h1 {
+    font-size: 2.2rem;
+  }
+}

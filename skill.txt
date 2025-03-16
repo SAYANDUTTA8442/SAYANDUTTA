@@ -1,0 +1,40 @@
+<section id="skill">
+    <h1>Skill</h1>
+        <div class="skill web-development">
+            <h3>Web Development</h3>
+            <div class="bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="skill content-writing">
+            <h3>Content Writing</h3>
+            <div class="bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="skill ms-office">
+            <h3>MS Office</h3>
+            <div class="bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="skill ms-excel">
+            <h3>MS Excel</h3>
+            <div class="bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="skill tally">
+            <h3>Tally</h3>
+            <div class="bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="skill android-app-dev">
+            <h3>Android App Development</h3>
+            <div class="bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+  </section>
